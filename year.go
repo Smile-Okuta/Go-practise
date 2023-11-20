@@ -1,22 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func year() {
+func main() {
 	fmt.Println("Enter year: ")
 
 	var year int
-	fmt.Scanln(year)
+	fmt.Scanln(&year)
 
-	leapYear := yearCal(year)
-
-	fmt.Printf("The student's letter grade is: %s\n", leapYear)
+	yearCal(year)
 
 }
 
-func yearCal(year int) bool {
+func yearCal(year int) string {
 	if year%4 == 0 {
 		fmt.Println("This is a leap year")
+
 	}
-	return false
+
+	return "This is not a leap year"
 }
