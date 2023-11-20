@@ -8,7 +8,9 @@ func year() {
 	var year int
 	fmt.Scanln(year)
 
-	yearCal(year)
+	leapYear := yearCal(year)
+
+	fmt.Printf("The student's letter grade is: %s\n", leapYear)
 
 }
 
